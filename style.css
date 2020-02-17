@@ -1,0 +1,323 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+.center-intro {
+    display: grid;
+    grid-column: 1/-1;
+    text-align: center;
+
+}
+
+#image{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow:hidden;
+    opacity: 20%;
+    position: fixed;
+    z-index: -5;
+    object-fit: cover;
+
+}
+
+
+
+ul {
+
+    background: black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 20px;
+    display: flex;
+     justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight:500;
+
+}
+
+ul li {
+    display: inline-block;
+/*
+    float: left;
+    margin-right: 1px;
+*/
+
+}
+
+
+li a {
+    display: block;
+    min-width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    /*    font-family: sans-serif;*/
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+ul li a:hover + .hidden,
+.hidden:hover {
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
+.show-menu {
+
+    text-decoration: none;
+    color: white;
+    background: black;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+    display: none;
+    transition: color 1s;
+}
+
+label:hover {
+    color: darkgray;
+}
+
+
+
+
+@media screen and (max-width: 760px) {
+    ul {
+        position: static;
+        display: none;
+    }
+
+    li {
+        margin-bottom: 1px;
+    }
+
+    ul li,
+    li a {
+        width: 100%
+    }
+
+    .show-menu {
+        display: block;
+    }
+
+    ul li a:hover + .hidden,
+    .hidden:hover {
+        display: block;
+        position: relative;
+
+    }
+
+}
+
+
+
+
+
+
+
+body{
+    font-family: Avenir, Roboto, Helvetica, san-serif;
+    margin:0px;
+
+}
+
+
+main section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+     padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+main section>a{
+    grid-column: 1/-1;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:black;
+
+}
+main section>a>h2{
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+article {
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+}
+
+article > img {
+    order: -1;
+    align-self: center;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    opacity: 80%;
+}
+
+
+
+
+article > button {
+    margin-top: auto;
+    background: black;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+/*    border-radius: 1rem;*/
+    font-size: 1.2rem;
+    z-index: 50;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+article > button:hover {
+
+    border-radius:50%;
+    transition: 1s;
+}
+
+
+@media screen and (max-width: 599px) {
+
+#wrapper{
+ display: grid;
+    grid-template-columns: 1fr;
+}
+     main section{
+    grid-template-columns:1fr;
+    grid-gap: 1rem;
+}
+
+
+}
+
+.vegetarian-image{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: url("imgs/Vegi/vegi5.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 0.5;
+    display: block;
+
+}
+
+.SoldOut-image{
+
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left:50%;
+    transform:  translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: url("imgs/SoldOut/sold-out1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: block;
+    opacity: 0.6;
+}
+
+.Allergen-image{
+
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left:50%;
+    transform:  translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: url("imgs/Allergen/Allergen.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: none;
+    opacity: 30%;
+}
+
+.hidden {
+    display: none;
+}
+
+.lineThrough{
+     text-decoration: line-through;
+
+}
+
+.alcho{
+    display: none;
+}
+
+/*Modal Part*/
+
+.hide {
+  display: none;
+}
+.modal-background {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+
+        <div class="center-intro">
+            <img id="image" src="imgs/Moscow/Moscow.jpg" alt="Moscow">
+
+
+        </div>
+
+
+
+        <header id="top">
+
+            <nav>
+                <label for="show-menu" class="show-menu">Menu</label>
+                <input type="checkbox" id="show-menu" role="button">
+                <ul id="menu">
+                </ul>
+            </nav>
+
+
+
+
+        </header>
+
+        <h1 class="center-intro">Welcome to Russian Restaurant</h1>
+
+
+        <main class="foods">
+
+        </main>
+
+        <template>
+            <article class="Dish-card">
+
+
+                <h1>Name of Dish:<br> <span></span> </h1>
+                <p></p>
+                <div class="alcho">Alchohol Volume: <span></span>%</div>
+                <div class="pris lineThrough">Price: <span></span>,- DKK </div>
+                <div class="disc hidden"> Discounted Price: <span></span>,-DKK</div>
+
+                <div class="vegetarian-image"></div>
+
+
+                <div class="SoldOut-image"></div>
+                <img src="">
+                <button id="modal-btn">Details</button>
+            </article>
+        </template>
+
+
+
+
+        <div class="modal-background hide">
+            <div class="modal-content">
+                <h3 class="modal-name">NAME</h3>
+                <img src="" alt="" class="modal-image" />
+                <p></p>
+                <p class="modal-description">LONG DESCRIPTION</p>
+
+                <div class="pris lineThrough">Price: <span></span>,- DKK </div>
+                <div class="disc hidden"> Discounted Price: <span></span>,-DKK</div>
+
+                <div class="vegetarian-image"></div>
+
+
+                <div class="SoldOut-image"></div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
